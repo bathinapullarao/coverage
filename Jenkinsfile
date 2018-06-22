@@ -32,6 +32,7 @@ stage('Build')
 	{
         try {
             sh "mvn sonar:sonar"
+	    sh "mvn test"	
             } 
 	catch(error)
 	    {
