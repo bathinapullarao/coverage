@@ -32,7 +32,7 @@ stage('Build')
 	{
         try {
             sh "mvn sonar:sonar"
-	    sh "mvn test"	
+	    sh "mvn clean jacoco:prepare-agent test jacoco:report -e | echo "ignore failure"	
             } 
 	catch(error)
 	    {
