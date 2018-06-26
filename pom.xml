@@ -191,15 +191,15 @@
                         </goals>
                     </execution>
                 </executions>
-
-                 
-                    
-  <groupId>org.jacoco</groupId>
-  <artifactId>jacoco-maven-plugin</artifactId>
-  <version>0.5.5.201112152213</version>
+                 </plugin>
+        
+             <plugin>
+                        <groupId>org.jacoco</groupId>
+                        <artifactId>jacoco-maven-plugin</artifactId>
+                           <version>0.5.5.201112152213</version>
   <configuration>
-   <destFile>${cicd}/target/coverage-reports/jacoco-unit.exec</destFile>
-   <dataFile>${cicd}/target/coverage-reports/jacoco-unit.exec</dataFile>
+   <destFile>${coverage}/target/coverage-reports/jacoco-unit.exec</destFile>
+   <dataFile>${coverage}/target/coverage-reports/jacoco-unit.exec</dataFile>
   </configuration>
   <executions>
    <execution>
@@ -224,10 +224,10 @@
    <source>1.5</source>
    <target>1.5</target>
   </configuration>
- 
-                 
-                 
+                   
                  </plugin>
-        </plugins>
+             
+             
+             </plugins>
     </build>
 </project>
