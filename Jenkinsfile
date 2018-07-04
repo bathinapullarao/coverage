@@ -201,7 +201,8 @@ def dipUAT(containerName, tag, dockerHubUser, httpPort){
 }
 def dipProd(containerName, tag, dockerHubUser, httpPort){
     sh "docker pull $dockerHubUser/$containerName"
-    sh "docker run -it --rm -p $httpPort:$httpPort --name $containerName $dockerHubUser/$containerName:$tag"
+    sh "docker run -p 8084:8080 bathinapullarao/jenkins-pipeline:latest"
+     // sh "docker run -it --rm -p $httpPort:$httpPort --name $containerName $dockerHubUser/$containerName:$tag"
     echo "Application started on port: ${httpPort} (http)"
 }
 
