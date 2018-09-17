@@ -48,12 +48,28 @@
         </repository>
         -->
     </repositories>
-    <distributionManagement>
+<!--    <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
-    </distributionManagement>
+    </distributionManagement>   -->
+    <distributionManagement>
+            
+                         
+        <repository>
+            <id>deployment</id>
+            <name>Internal Releases</name>
+            <url>http://192.168.91.49:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>deployment</id>
+            <name>Internal Snapshot Releases</name>
+            <url>http://192.168.91.49:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement> 
+         
+         
     <developers>
         <developer>
             <id>tntim96</id>
@@ -203,16 +219,5 @@
              </plugins>
     </build>
 
-         <distributionManagement>
-        <repository>
-            <id>deployment</id>
-            <name>Internal Releases</name>
-            <url>http://192.168.91.49:8081/nexus/content/repositories/releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>deployment</id>
-            <name>Internal Snapshot Releases</name>
-            <url>http://192.168.91.49:8081/nexus/content/repositories/snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>  
+          
 </project>
